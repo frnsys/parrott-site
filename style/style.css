@@ -30,9 +30,16 @@ a:active,
 a:hover {
   outline: 0; }
 
-code {
+code, .code {
   font-family: monospace, serif;
-  _font-family: 'courier new', monospace;
+  _font-family: 'courier new', monospace; }
+
+.code {
+  font-size: 0.8em;
+  color: #DDE958;
+  padding: 0 0.4em; }
+
+code {
   font-size: 0.95em;
   background: #444;
   padding: 1em;
@@ -57,25 +64,26 @@ header {
     max-width: 600px;
     margin: 0 auto;
     display: block; }
-  header a, header a:visited {
-    background: #DF3243;
-    padding: 0.4em 0.8em;
-    box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
-    color: #f8f8f8;
-    text-decoration: none;
-    font-size: 0.8em;
-    -webkit-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    transition: all 0.2s ease-in-out; }
-    header a:hover, header a:visited:hover {
-      background: #e24453; }
+
+header a, header a:visited, section a, section a:visited {
+  background: #DF3243;
+  padding: 0.4em 0.8em;
+  box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
+  color: #f8f8f8;
+  text-decoration: none;
+  font-size: 0.8em;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out; }
+  header a:hover, header a:visited:hover, section a:hover, section a:visited:hover {
+    background: #e24453; }
 
 section {
   width: 100%;
   max-width: 600px;
   margin: 0 auto;
-  padding: 1em 2em 6em 2em; }
+  padding: 1em 2em; }
 
 footer {
   text-align: center;

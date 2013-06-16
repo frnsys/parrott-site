@@ -29,9 +29,16 @@ a:hover {
     outline: 0;
 }
 
-code {
+code, .code {
     font-family: monospace, serif;
     _font-family: 'courier new', monospace;
+}
+.code {
+    font-size: 0.8em;
+    color:#DDE958;
+    padding:0 0.4em;
+}
+code {
     font-size: 0.95em;
     background:#444;
     padding:1em;
@@ -58,7 +65,9 @@ header {
         margin:0 auto;
         display:block;
     }
+}
 
+header, section {
     a, a:visited {
         background:#DF3243;
         padding:0.4em 0.8em;
@@ -82,7 +91,7 @@ section {
     width:100%;
     max-width:600px;
     margin:0 auto;
-    padding:1em 2em 6em 2em;
+    padding:1em 2em;
 }
 
 footer {

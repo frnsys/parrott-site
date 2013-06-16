@@ -25,11 +25,46 @@
         </header>
 
         <section>
-            Still in development...
+            <p>Parrott is intended to be a pseudo-intelligent retweeter. It will learn from your retweeting habits, and optionally the retweeting habits of others, and try to retweet things on your behalf.</p>
+            <p>You could in theory collect tweets/retweets from several tastemaking accounts, and train Parrott to be a tastemaker.</p>
+        </section>
+
+        <section>
+            <h5>Setup</h5>
+            <p>First, clone the Github repo.</p>
+            <code>
+                $ git clone https://github.com/ftzeng/parrott.git
+            </code>
+            <p>You will need to setup a Python <a href="http://www.virtualenv.org/en/latest/">virtualenv</a>.</p>
+            <code>
+                $ virtualenv parrott-env --no-site-packages<br />
+                $ source parrott-env/bin/activate<br />
+                $ pip install -r requirements.txt
+            </code>
+            <p>Then you need to start the <a href="https://lucene.apache.org/solr/">Solr</a> server:</p>
+            <code>
+                $ cd solr<br />
+                $ java -jar start.jar -Dsolr.solr.home=memory
+            </code>
+            <p>The Solr admin panel is accessible at <span class="code">http://localhost:8983/solr/#/</span>.</p>
+            <p>Note that you can move this <span class="code">solr</span> directory to another machine and run it there. But you will have to update the <span class="code">SOLR_URL</span> constant in <span class="code">app/parrott/memory/memory.py</span> to point to the new Solr URL.</p>
+            <p>You may want to empty out the Solr instance so you can start fresh:</p>
+            <code>
+                    $ curl http://localhost:8983/solr/update --data '&lt;delete&gt;&lt;query&gt;*:*&lt;/query&gt;&lt;/delete&gt;' -H 'Content-type:text/xml; charset=utf-8'; curl http://localhost:8983/solr/update --data '&lt;commit/&gt;' -H 'Content-type:text/xml; charset=utf-8'&quot;
+            </code>
+            <p>Finally, you can start the actual application.</p>
+            <code>
+                $ cd ..<br />
+                $ ./application.py
+            </code>
+            <p>You should be prompted, in the command line, to authenticate your Twitter account. Follow those instructions.</p>
+            <p>Then see Parrott at <span class="code">http://localhost:5000/</span>. This provides an interface for marking tweets as positive or negative training examples.</p>
+            <p>You can visit <span class="code">http://localhost:5000/classify</span> to try classifying some text.</p>
+            <p>Note that new Tweets will be collected from the authenticated user's timeline every 30 minutes. You can edit this in <span class="code">application.py</span>.
         </section>
 
         <footer>
-            Parrot is by <a href="http://supermedes.com">Francis Tseng</a>, using a <a href="https://github.com/ftzeng/naivebayes">port</a> of <a href="http://goo.gl/uLmBf">Edwin Chen's Naive Bayes classifier</a>. Parrott is released under the <a href="https://github.com/ftzeng/parrott/blob/master/LICENSE.txt">MIT License</a>.
+            Parrott is by <a href="http://supermedes.com">Francis Tseng</a>, using a <a href="https://github.com/ftzeng/naivebayes">port</a> of <a href="http://goo.gl/uLmBf">Edwin Chen's Naive Bayes classifier</a>. Parrott is released under the <a href="https://github.com/ftzeng/parrott/blob/master/LICENSE.txt">MIT License</a>.
         </footer>
 
         <script type="text/javascript" src="//use.typekit.net/lws3ygq.js"></script>
