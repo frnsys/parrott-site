@@ -58,7 +58,9 @@ header {
   width: 100%;
   margin: 0 auto;
   padding: 2em;
-  text-align: center; }
+  text-align: center;
+  background: #fff;
+  color: #111; }
   header img {
     width: 100%;
     max-width: 240px;
@@ -87,7 +89,7 @@ section {
 
 footer {
   text-align: center;
-  padding: 2em 0;
+  padding: 2em;
   font-size: 0.8em;
   color: #888; }
   footer a, footer a:visited {
