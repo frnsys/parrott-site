@@ -48,15 +48,49 @@ img {
 
 h1 {
   font-family: "futura-pt", "Helvetica Neue" "Helvetica", "Arial", "sans-serif";
-  font-style: italic; }
+  font-style: italic;
+  color: #f12e41; }
 
 h4 {
-  font-weight: normal; }
+  font-weight: normal;
+  color: #111111; }
+
+nav {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+  padding: 0em 1em 1px 1em;
+  background: #6b6be7;
+  top: 0;
+  left: 0;
+  position: fixed;
+  width: 100%;
+  font-size: 0; }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    font-size: 16px; }
+    nav ul a, nav ul a:visited {
+      background: none;
+      box-shadow: none;
+      display: block;
+      padding: 1em 2em; }
+      nav ul a:hover, nav ul a:visited:hover {
+        background: #5959e4; }
+  nav li {
+    margin: 0;
+    padding: 0;
+    float: left; }
+    nav li.selected a, nav li.selected a:visited {
+      background: #5959e4; }
 
 header {
+  color: white;
   width: 100%;
   margin: 0 auto;
-  padding: 2em;
+  padding: 6em 2em 2em 2em;
   text-align: center; }
   header img {
     width: 100%;
@@ -75,8 +109,6 @@ header a, header a:visited, section a, section a:visited {
   -o-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out; }
-  header a:hover, header a:visited:hover, section a:hover, section a:visited:hover {
-    background: #e24453; }
 
 section {
   width: 100%;
@@ -105,3 +137,9 @@ footer {
 ::selection {
   background: #111111;
   text-shadow: none; }
+
+a[name], a[name]:visited {
+  background: none !important;
+  box-shadow: none !important;
+  height: 0;
+  padding: 0; }

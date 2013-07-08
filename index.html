@@ -11,6 +11,8 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="style/style.css">
+        <script type="text/javascript" src="//use.typekit.net/hht5ehn.js"></script>
+        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -18,19 +20,33 @@
         <![endif]-->
 
         <header>
+            <nav>
+                <ul>
+                    <li>
+                       <a href="#about">About</a>
+                   </li>
+                    <li>
+                       <a href="#setup">Setup</a>
+                   </li>
+                    <li>
+                       <a href="https://github.com/ftzeng/parrott" data-bypass>Source</a>
+                   </li>
+                </ul>
+            </nav>
 	       <img src="img/parrott.png" class="parrott">
 
            <h1>parrott</h1>
            <h4>A pseudo-intelligent retweeter</h4>
-           <a href="https://github.com/ftzeng/parrott">parrott on github</a>
         </header>
 
         <section>
+            <a name="about"></a>
             <p>Parrott is intended to be a pseudo-intelligent retweeter. It will learn from your retweeting habits, and optionally the retweeting habits of others, and try to retweet things on your behalf.</p>
             <p>You could in theory collect tweets/retweets from several tastemaking accounts, and train Parrott to be a tastemaker.</p>
         </section>
 
         <section>
+            <a name="setup"></a>
             <h5>Setup</h5>
             <p>First, clone the Github repo.</p>
             <code>
@@ -68,8 +84,8 @@
             Parrott is by <a href="http://supermedes.com">Francis Tseng</a>, using a <a href="https://github.com/ftzeng/naivebayes">port</a> of <a href="http://goo.gl/uLmBf">Edwin Chen's Naive Bayes classifier</a>. Parrott is released under the <a href="https://github.com/ftzeng/parrott/blob/master/LICENSE.txt">MIT License</a>.
         </footer>
 
-        <script type="text/javascript" src="//use.typekit.net/hht5ehn.js"></script>
-        <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="/scripts/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+        <script src="/scripts/main.js"></script>
     </body>
 </html>

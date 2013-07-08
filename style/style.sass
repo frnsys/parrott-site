@@ -56,15 +56,50 @@ img
 h1
   font-family: 'futura-pt', 'Helvetica Neue' 'Helvetica', 'Arial', 'sans-serif'
   font-style: italic
+  color: #F12E41
+
 
 h4
   font-weight: normal
+  color: #111
 
+nav
+  text-transform: uppercase
+  text-align: center
+  font-weight: bold
+  padding: 0em 1em 1px 1em
+  background: #6B6BE7
+  top: 0
+  left: 0
+  position: fixed
+  width: 100%
+  font-size: 0
+  ul
+    list-style: none
+    margin: 0
+    padding: 0
+    display: inline-block
+    font-size: 16px
+    a, a:visited
+      background: none
+      box-shadow: none
+      display: block
+      padding: 1em 2em
+      &:hover
+        background: darken(#6B6BE7, 4%)
+  li
+    margin: 0
+    padding: 0
+    float: left
+    &.selected
+      a, a:visited
+        background: darken(#6B6BE7, 4%)
 
 header
+  color: #fff
   width: 100%
   margin: 0 auto
-  padding: 2em
+  padding: 6em 2em 2em 2em
   text-align: center
 
   img
@@ -86,9 +121,6 @@ header, section
     -o-transition: all 0.2s ease-in-out
     -moz-transition: all 0.2s ease-in-out
     transition: all 0.2s ease-in-out
-
-    &:hover
-      background: lighten(#DF3243, 4%)
 
 section
   width: 100%
@@ -122,3 +154,9 @@ footer
 ::selection
   background: #111
   text-shadow: none
+
+a[name], a[name]:visited
+  background: none !important
+  box-shadow: none !important
+  height: 0
+  padding: 0
