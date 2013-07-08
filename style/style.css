@@ -15,7 +15,7 @@ html, body {
   font-size: 100%;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
-  font-family: "prenton", sans-serif; }
+  font-family: "freight-sans-pro", sans-serif; }
 
 a:focus {
   outline: thin dotted; }
@@ -30,12 +30,12 @@ code, .code {
 
 .code {
   font-size: 0.8em;
-  color: #dde958;
+  color: #68e494;
   padding: 0 0.4em; }
 
 code {
   font-size: 0.95em;
-  background: #444444;
+  background: #eeeeee;
   padding: 1em;
   width: 100%;
   display: block; }
