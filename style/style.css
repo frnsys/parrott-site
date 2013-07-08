@@ -1,27 +1,21 @@
-/*
-		Parrott
-
-		Copyright 2013 Francis Tseng
-		Released under the MIT License
-*/
+/* Parrott
+ * Copyright 2013 Francis Tseng
+ * Released under the MIT License */
 * {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 html, body {
-  background: #0F4F6D;
-  color: #fff;
+  background: #fafafa;
+  color: #111111;
   margin: 0;
   font-size: 1em;
   line-height: 1.4;
   font-size: 100%;
-  /* 1 */
   -webkit-text-size-adjust: 100%;
-  /* 2 */
   -ms-text-size-adjust: 100%;
-  /* 2 */
-  font-family: "prenton",sans-serif; }
+  font-family: "prenton", sans-serif; }
 
 a:focus {
   outline: thin dotted; }
@@ -32,16 +26,16 @@ a:hover {
 
 code, .code {
   font-family: monospace, serif;
-  _font-family: 'courier new', monospace; }
+  _font-family: "courier new", monospace; }
 
 .code {
   font-size: 0.8em;
-  color: #DDE958;
+  color: #dde958;
   padding: 0 0.4em; }
 
 code {
   font-size: 0.95em;
-  background: #444;
+  background: #444444;
   padding: 1em;
   width: 100%;
   display: block; }
@@ -50,17 +44,20 @@ img {
   max-width: 100%;
   vertical-align: middle;
   border: 0;
-  /* 1 */
-  -ms-interpolation-mode: bicubic;
-  /* 2 */ }
+  -ms-interpolation-mode: bicubic; }
+
+h1 {
+  font-family: "futura-pt", "Helvetica Neue" "Helvetica", "Arial", "sans-serif";
+  font-style: italic; }
+
+h4 {
+  font-weight: normal; }
 
 header {
   width: 100%;
   margin: 0 auto;
   padding: 2em;
-  text-align: center;
-  background: #fff;
-  color: #111; }
+  text-align: center; }
   header img {
     width: 100%;
     max-width: 240px;
@@ -68,7 +65,7 @@ header {
     display: block; }
 
 header a, header a:visited, section a, section a:visited {
-  background: #DF3243;
+  background: #df3243;
   padding: 0.4em 0.8em;
   box-shadow: 2px 2px 0 rgba(0, 0, 0, 0.3);
   color: #f8f8f8;
@@ -91,20 +88,20 @@ footer {
   text-align: center;
   padding: 2em;
   font-size: 0.8em;
-  color: #888; }
+  color: #888888; }
   footer a, footer a:visited {
-    color: #999; }
+    color: #999999; }
 
 .chromeframe {
   margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
+  background: #cccccc;
+  color: black;
   padding: 0.2em 0; }
 
 ::-moz-selection {
-  background: #111;
+  background: #111111;
   text-shadow: none; }
 
 ::selection {
-  background: #111;
+  background: #111111;
   text-shadow: none; }
